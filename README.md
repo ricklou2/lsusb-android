@@ -8,6 +8,8 @@
 
 A graphical Android front-end for the static **lsusb** (usbutils 017 + libusb 1.0.27, with `usb.ids` embedded). The APK bundles the lsusb binaries for four ABIs and the system selects the matching one automatically. It runs on Android 7–16 (API 24–36).
 
+**Upstream version:** usbutils 017 + libusb 1.0.27
+
 ### Features
 
 - **Summary** → `lsusb`, **Verbose** → `lsusb -v`, **Tree** → `lsusb -t`, **Select** → list every device, then run `lsusb -v -D <node>` on the chosen one.
@@ -56,6 +58,8 @@ lsusb-gui.apk       Prebuilt APK
 
 静态 **lsusb**（usbutils 017 + libusb 1.0.27，`usb.ids` 已内嵌）的安卓图形界面前端。APK 内置四个 ABI 的 lsusb 二进制，系统按设备 ABI 自动选用，支持 Android 7–16（API 24–36）。
 
+**上游版本：**usbutils 017 + libusb 1.0.27
+
 ### 功能
 
 - **简要** → `lsusb`，**详细** → `lsusb -v`，**树形** → `lsusb -t`，**选择** → 先列出全部设备，再对选中的设备执行 `lsusb -v -D <节点>`。
@@ -103,6 +107,8 @@ lsusb-gui.apk       预编译 APK
 ## 繁體中文
 
 靜態 **lsusb**（usbutils 017 + libusb 1.0.27，`usb.ids` 已內嵌）的安卓圖形介面前端。APK 內建四個 ABI 的 lsusb 可執行檔，系統依裝置 ABI 自動選用，支援 Android 7–16（API 24–36）。
+
+**上游版本：**usbutils 017 + libusb 1.0.27
 
 ### 功能
 
