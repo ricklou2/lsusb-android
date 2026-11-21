@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:fitsSystemWindows="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/green_light">
+
+    <!-- 标题栏：标题 + 右上角语言切换 -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/green"
+        android:paddingStart="18dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/title"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.01" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_copy"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="2dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/copy"
+            android:src="@drawable/ic_copy" />
+
+        <ImageButton
+            android:id="@+id/btn_view"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="2dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/mode_table"
+            android:src="@drawable/ic_table" />
+
+        <ImageButton
+            android:id="@+id/btn_lang"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/lang"
+            android:src="@drawable/ic_translate" />
+    </LinearLayout>
+
+    <!-- 四个按钮 2x2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp">
+
+        <Button
+            android:id="@+id/btn_brief"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/green"
+            android:textColor="#FFFFFFFF"
+            android:text="@string/btn_brief"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_verbose"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/green"
+            android:textColor="#FFFFFFFF"
+            android:text="@string/btn_verbose"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp">
+
+        <Button
+            android:id="@+id/btn_tree"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/green"
+            android:textColor="#FFFFFFFF"
+            android:text="@string/btn_tree"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="@color/green_dark"
+            android:textColor="#FFFFFFFF"
+            android:text="@string/btn_select"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp"
+        android:text="@string/ready"
+        android:textColor="#FF4E5A52"
+        android:textSize="12sp" />
+
+    <!-- 输出区 -->
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_output"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="horizontal">
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:typeface="monospace"
+                android:textSize="12sp"
+                android:scrollHorizontally="true"
+                android:textColor="#FF1F2A24"
+                android:textIsSelectable="true"
+                android:text="@string/ready" />
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
